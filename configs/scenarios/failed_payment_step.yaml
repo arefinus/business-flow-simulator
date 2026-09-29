@@ -1,0 +1,27 @@
+schema_version: 1
+scenario_id: failed_payment_step
+description: Baseline workload with a high share of declined payment attempts exercising the retry policy.
+horizon_minutes: 20160
+seed: 42
+workload:
+  orders: 60
+  arrival_mean_gap_minutes: 120
+  min_items_per_order: 1
+  max_items_per_order: 3
+  min_qty_per_line: 1
+  max_qty_per_line: 20
+  skus: 6
+  initial_stock_per_sku: 220
+  reorder_point: 100
+  reorder_qty: 300
+  customers: 6
+  customer_opening_balance_cents: 20000000
+  min_unit_price_cents: 500
+  max_unit_price_cents: 15000
+faults:
+  failed_payment_step: {probability: 0.35, repeat_probability: 0.6}
+  price_variance: {probability: 0.06, max_variance_bps: 300}
+  cancellation: {probability: 0.03, max_cancel_after_minutes: 60}
+  delayed_shipment: {probability: 0.0, delay_minutes: 0}
+  duplicate_invoice: {probability: 0.0, replay_same_id_probability: 0.0}
+retry_policy: {max_attempts: 3, base_backoff_minutes: 60, multiplier: 2}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/arefinus/business-flow-simulator/schemas/workload.schema.json",
+  "title": "Workload",
+  "description": "A fully materialised synthetic workload: orders, lines, prices and every fault draw, fixed before any policy runs.",
+  "type": "object",
+  "required": ["schema_version", "label", "scenario_id", "seed", "skus", "initial_stock", "reorder_point", "reorder_qty", "customers", "opening_balances_cents", "orders"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "label": {"const": "synthetic"},
+    "scenario_id": {"type": "string"},
+    "seed": {"type": "integer", "minimum": 0},
+    "skus": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^SYN-SKU-[0-9]{3}$"}},
+    "initial_stock": {"type": "object"},
+    "reorder_point": {"type": "integer", "minimum": 0},
+    "reorder_qty": {"type": "integer", "minimum": 0},
+    "customers": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^SYN-CUST-[0-9]{2}$"}},
+    "opening_balances_cents": {"type": "object"},
+    "orders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["order_id", "customer_id", "t_arrival", "lines", "faults"],
+        "additionalProperties": false,
+        "properties": {
+          "order_id": {"type": "string", "pattern": "^SYN-PO-[0-9]{6}$"},
+          "customer_id": {"type": "string", "pattern": "^SYN-CUST-[0-9]{2}$"},
+          "t_arrival": {"type": "integer", "minimum": 0},
+          "lines": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["sku", "qty", "unit_price_cents"],
+              "additionalProperties": false,
+              "properties": {
+                "sku": {"type": "string"},
+                "qty": {"type": "integer", "minimum": 1},
+                "unit_price_cents": {"type": "integer", "minimum": 0}
+              }
+            }
+          },
+          "faults": {
+            "type": "object",
+            "required": ["shipment_delay_minutes", "duplicate_invoice", "replay_same_id", "payment_failures", "price_variance_bps", "cancel_after_minutes"],
+            "additionalProperties": false,
+            "properties": {
+              "shipment_delay_minutes": {"type": "integer", "minimum": 0},
+              "duplicate_invoice": {"type": "boolean"},
+              "replay_same_id": {"type": "boolean"},
+              "payment_failures": {"type": "integer", "minimum": 0},
+              "price_variance_bps": {"type": "integer"},
+              "cancel_after_minutes": {"type": "integer", "minimum": -1}
+            }
+          }
+        }
+      }
+    }
+  }
+}

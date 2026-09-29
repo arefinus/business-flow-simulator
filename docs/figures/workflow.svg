@@ -1,0 +1,62 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='960' height='420' viewBox='0 0 960 420'>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='16' y='28' font-family='Helvetica, Arial, sans-serif' font-size='16' fill='#222'>business-flow-simulator: order state machine (top) and actor flows (bottom). Synthetic demo, fictional organisations.</text>
+<rect x='41' y='60' width='128' height='44' rx='8' fill='#e8f0fe' stroke='#3b5bdb' stroke-width='1.5'/>
+<text x='105' y='87' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#1c2b4a'>purchase_order</text>
+<line x1='169' y1='82' x2='191' y2='82' stroke='#3b5bdb' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='191' y='60' width='128' height='44' rx='8' fill='#e8f0fe' stroke='#3b5bdb' stroke-width='1.5'/>
+<text x='255' y='87' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#1c2b4a'>fulfillment</text>
+<line x1='319' y1='82' x2='341' y2='82' stroke='#3b5bdb' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='341' y='60' width='128' height='44' rx='8' fill='#e8f0fe' stroke='#3b5bdb' stroke-width='1.5'/>
+<text x='405' y='87' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#1c2b4a'>invoice</text>
+<line x1='469' y1='82' x2='491' y2='82' stroke='#3b5bdb' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='491' y='60' width='128' height='44' rx='8' fill='#e8f0fe' stroke='#3b5bdb' stroke-width='1.5'/>
+<text x='555' y='87' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#1c2b4a'>payment_review</text>
+<line x1='619' y1='82' x2='641' y2='82' stroke='#3b5bdb' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='641' y='60' width='128' height='44' rx='8' fill='#e8f0fe' stroke='#3b5bdb' stroke-width='1.5'/>
+<text x='705' y='87' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#1c2b4a'>settlement</text>
+<line x1='769' y1='82' x2='791' y2='82' stroke='#3b5bdb' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='791' y='60' width='128' height='44' rx='8' fill='#e8f0fe' stroke='#3b5bdb' stroke-width='1.5'/>
+<text x='855' y='87' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#1c2b4a'>reporting</text>
+<rect x='191' y='130' width='128' height='44' rx='8' fill='#fdecec' stroke='#c92a2a' stroke-width='1.5'/>
+<text x='255' y='157' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' fill='#7a1a1a'>cancelled + compensation</text>
+<line x1='255' y1='104' x2='255' y2='130' stroke='#c92a2a' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 575 60 q 30 -30 0 -30 q -30 0 -20 30' fill='none' stroke='#3b5bdb' stroke-width='1.2'/>
+<text x='595' y='40' font-family='Helvetica, Arial, sans-serif' font-size='10' fill='#1c2b4a'>retry / review loop</text>
+<rect x='25' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='84' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>supplier</text>
+<rect x='157' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='216' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>manufacturer</text>
+<rect x='289' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='348' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>warehouse</text>
+<rect x='421' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='480' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>retailer</text>
+<rect x='553' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='612' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>customer</text>
+<rect x='685' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='744' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>invoice payment service</text>
+<rect x='817' y='250' width='118' height='40' rx='6' fill='#f1f3f5' stroke='#495057'/>
+<text x='876' y='274' font-family='Helvetica, Arial, sans-serif' font-size='10' text-anchor='middle' fill='#212529'>review queue</text>
+<path d='M 612 250 Q 546 210 480 250' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='546' y='208' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>purchase order</text>
+<path d='M 480 290 Q 414 348 348 290' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='414' y='352' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>reservation</text>
+<path d='M 348 250 Q 282 174 216 250' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='282' y='172' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>replenishment</text>
+<path d='M 84 290 Q 150 384 216 290' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='150' y='388' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>components</text>
+<path d='M 216 250 Q 282 138 348 250' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='282' y='136' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>restock</text>
+<path d='M 348 290 Q 480 330 612 290' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='480' y='334' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>shipment</text>
+<path d='M 744 250 Q 678 192 612 250' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='678' y='190' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>invoice</text>
+<path d='M 612 290 Q 678 366 744 290' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='678' y='370' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>payment</text>
+<path d='M 480 250 Q 678 156 876 250' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='678' y='154' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>exception</text>
+<path d='M 876 290 Q 810 402 744 290' fill='none' stroke='#868e96' stroke-width='1.1' marker-end='url(#arrow-grey)'/>
+<text x='810' y='406' font-family='Helvetica, Arial, sans-serif' font-size='9' text-anchor='middle' fill='#495057'>resolution</text>
+<defs><marker id='arrow' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#3b5bdb'/></marker><marker id='arrow-grey' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#868e96'/></marker></defs>
+<text x='16' y='408' font-family='Helvetica, Arial, sans-serif' font-size='10' fill='#666'>Rendered by tools/render_figures.py. original_project; no real company or transaction is depicted.</text>
+</svg>

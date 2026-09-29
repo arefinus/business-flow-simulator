@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/arefinus/business-flow-simulator/schemas/scenario.schema.json",
+  "title": "Scenario",
+  "description": "A scenario file (configs/scenarios/*.yaml) or the decoded form of an exported scenario string.",
+  "type": "object",
+  "required": ["scenario_id", "horizon_minutes", "seed", "workload", "faults", "retry_policy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "scenario_id": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+    "description": {"type": "string"},
+    "horizon_minutes": {"type": "integer", "minimum": 1},
+    "seed": {"type": "integer", "minimum": 0},
+    "workload": {
+      "type": "object",
+      "required": ["orders", "arrival_mean_gap_minutes", "min_items_per_order", "max_items_per_order", "min_qty_per_line", "max_qty_per_line", "skus", "initial_stock_per_sku", "reorder_point", "reorder_qty", "customers", "customer_opening_balance_cents", "min_unit_price_cents", "max_unit_price_cents"],
+      "properties": {
+        "orders": {"type": "integer", "minimum": 1},
+        "arrival_mean_gap_minutes": {"type": "integer", "minimum": 0},
+        "min_items_per_order": {"type": "integer", "minimum": 1},
+        "max_items_per_order": {"type": "integer", "minimum": 1},
+        "min_qty_per_line": {"type": "integer", "minimum": 1},
+        "max_qty_per_line": {"type": "integer", "minimum": 1},
+        "skus": {"type": "integer", "minimum": 1},
+        "initial_stock_per_sku": {"type": "integer", "minimum": 0},
+        "reorder_point": {"type": "integer", "minimum": 0},
+        "reorder_qty": {"type": "integer", "minimum": 0},
+        "customers": {"type": "integer", "minimum": 1, "maximum": 8},
+        "customer_opening_balance_cents": {"type": "integer", "minimum": 0},
+        "min_unit_price_cents": {"type": "integer", "minimum": 0},
+        "max_unit_price_cents": {"type": "integer", "minimum": 0}
+      }
+    },
+    "faults": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "delayed_shipment": {"type": "object", "properties": {"probability": {"type": "number", "minimum": 0, "maximum": 1}, "delay_minutes": {"type": "integer", "minimum": 0}}},
+        "duplicate_invoice": {"type": "object", "properties": {"probability": {"type": "number", "minimum": 0, "maximum": 1}, "replay_same_id_probability": {"type": "number", "minimum": 0, "maximum": 1}}},
+        "failed_payment_step": {"type": "object", "properties": {"probability": {"type": "number", "minimum": 0, "maximum": 1}, "repeat_probability": {"type": "number", "minimum": 0, "maximum": 1}}},
+        "price_variance": {"type": "object", "properties": {"probability": {"type": "number", "minimum": 0, "maximum": 1}, "max_variance_bps": {"type": "integer", "minimum": 0}}},
+        "cancellation": {"type": "object", "properties": {"probability": {"type": "number", "minimum": 0, "maximum": 1}, "max_cancel_after_minutes": {"type": "integer", "minimum": 5}}}
+      }
+    },
+    "retry_policy": {
+      "type": "object",
+      "required": ["max_attempts", "base_backoff_minutes", "multiplier"],
+      "properties": {
+        "max_attempts": {"type": "integer", "minimum": 1},
+        "base_backoff_minutes": {"type": "integer", "minimum": 0},
+        "multiplier": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

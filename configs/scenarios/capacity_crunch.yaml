@@ -1,0 +1,27 @@
+schema_version: 1
+scenario_id: capacity_crunch
+description: Dense order arrivals, thin stock and many exceptions; stresses replenishment and the review queue.
+horizon_minutes: 20160
+seed: 42
+workload:
+  orders: 160
+  arrival_mean_gap_minutes: 40
+  min_items_per_order: 1
+  max_items_per_order: 4
+  min_qty_per_line: 5
+  max_qty_per_line: 30
+  skus: 6
+  initial_stock_per_sku: 250
+  reorder_point: 100
+  reorder_qty: 300
+  customers: 8
+  customer_opening_balance_cents: 30000000
+  min_unit_price_cents: 500
+  max_unit_price_cents: 15000
+faults:
+  price_variance: {probability: 0.25, max_variance_bps: 400}
+  failed_payment_step: {probability: 0.15, repeat_probability: 0.5}
+  duplicate_invoice: {probability: 0.1, replay_same_id_probability: 0.1}
+  delayed_shipment: {probability: 0.1, delay_minutes: 1440}
+  cancellation: {probability: 0.03, max_cancel_after_minutes: 60}
+retry_policy: {max_attempts: 3, base_backoff_minutes: 60, multiplier: 2}

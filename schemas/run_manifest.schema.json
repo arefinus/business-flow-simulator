@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/arefinus/business-flow-simulator/schemas/run_manifest.schema.json",
+  "title": "Run manifest",
+  "type": "object",
+  "required": ["schema_version", "project_id", "run_id", "status", "mode", "evidence_status", "git_commit", "data", "configuration_hash", "seed", "environment", "metrics_file", "predictions_file", "started_at", "finished_at"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project_id": {"const": "business-flow-simulator"},
+    "run_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["completed", "failed"]},
+    "mode": {"type": "string", "enum": ["smoke", "demo", "experiment"]},
+    "evidence_status": {"type": "string", "enum": ["demo", "reproduced"]},
+    "git_commit": {"type": ["string", "null"]},
+    "data": {
+      "type": "object",
+      "required": ["source_id", "version", "split_manifest_hash", "sample_counts"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "version": {"type": "string"},
+        "split_manifest_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "sample_counts": {"type": "object"}
+      }
+    },
+    "configuration_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "seed": {"type": "integer"},
+    "environment": {"type": "object", "required": ["python", "device"]},
+    "metrics_file": {"type": ["string", "null"]},
+    "predictions_file": {"type": ["string", "null"]},
+    "started_at": {"type": "string"},
+    "finished_at": {"type": "string"}
+  }
+}

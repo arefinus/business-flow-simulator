@@ -1,0 +1,1542 @@
+{
+  "schema_version": 1,
+  "label": "synthetic",
+  "scenario_id": "baseline",
+  "seed": 42,
+  "skus": [
+    "SYN-SKU-001",
+    "SYN-SKU-002",
+    "SYN-SKU-003",
+    "SYN-SKU-004",
+    "SYN-SKU-005",
+    "SYN-SKU-006"
+  ],
+  "initial_stock": {
+    "SYN-SKU-001": 220,
+    "SYN-SKU-002": 220,
+    "SYN-SKU-003": 220,
+    "SYN-SKU-004": 220,
+    "SYN-SKU-005": 220,
+    "SYN-SKU-006": 220
+  },
+  "reorder_point": 100,
+  "reorder_qty": 300,
+  "customers": [
+    "SYN-CUST-01",
+    "SYN-CUST-02",
+    "SYN-CUST-03",
+    "SYN-CUST-04",
+    "SYN-CUST-05",
+    "SYN-CUST-06"
+  ],
+  "opening_balances_cents": {
+    "SYN-CUST-01": 20000000,
+    "SYN-CUST-02": 20000000,
+    "SYN-CUST-03": 20000000,
+    "SYN-CUST-04": 20000000,
+    "SYN-CUST-05": 20000000,
+    "SYN-CUST-06": 20000000
+  },
+  "orders": [
+    {
+      "order_id": "SYN-PO-000001",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 31,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 19,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 14,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 2,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000002",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 97,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 1,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 6,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000003",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 151,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 2,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 15,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000004",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 205,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 3,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000005",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 278,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 12,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 7,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000006",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 300,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 8,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 11,
+          "unit_price_cents": 5006
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000007",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 551,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 13,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 15,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000008",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 613,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 17,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000009",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 621,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 17,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 9,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000010",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 744,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 14,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000011",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 1037,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 5,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 12,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 6,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000012",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 1092,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 8,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 19,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000013",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 1170,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 7,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 18,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 7,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000014",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 1201,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 18,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 8,
+          "unit_price_cents": 5006
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000015",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 1210,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 16,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000016",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 1273,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 14,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000017",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 1335,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 7,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 7,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000018",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 1573,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 3,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 8,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 6,
+          "unit_price_cents": 5006
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000019",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 1610,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 18,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 16,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000020",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 1617,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 6,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 2,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000021",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 1883,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 20,
+          "unit_price_cents": 5006
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000022",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 2035,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 13,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000023",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 2812,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 18,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000024",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 2882,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 18,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 10,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 4,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000025",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 2933,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 9,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 2,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 3,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000026",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 3096,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 4,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 3,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 5,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 73,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000027",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 3287,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 7,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000028",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 3308,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 6,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000029",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 3508,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 13,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 2,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000030",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 3511,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 11,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000031",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 3604,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 9,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000032",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 3673,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 9,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 2,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 14,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000033",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 3741,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 4,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 10,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 17,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000034",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 3799,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 13,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 18,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 1,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000035",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 3828,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 3,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 10,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000036",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 4026,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 2,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000037",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 4179,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 8,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 5,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000038",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 4375,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 18,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 8,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 4,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000039",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 4446,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 6,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 16,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 15,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000040",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 4516,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 11,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 11,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 18,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000041",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 4610,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 14,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 13,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000042",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 4653,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 18,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 20,
+          "unit_price_cents": 5006
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000043",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 4808,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 18,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 1,
+          "unit_price_cents": 5006
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000044",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 4845,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 11,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 11,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000045",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 4852,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 2,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 1,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000046",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 4882,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 20,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 20,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 4,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000047",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 4943,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 4,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 10,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 20,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000048",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 5069,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 16,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000049",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 5158,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 15,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 14,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 19,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000050",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 5260,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 16,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 11,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 6,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000051",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 5262,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 8,
+          "unit_price_cents": 10976
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000052",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 5265,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 8,
+          "unit_price_cents": 2324
+        },
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 10,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000053",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 5411,
+      "lines": [
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 8,
+          "unit_price_cents": 909
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 4,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000054",
+      "customer_id": "SYN-CUST-02",
+      "t_arrival": 5491,
+      "lines": [
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 4,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 7,
+          "unit_price_cents": 4512
+        },
+        {
+          "sku": "SYN-SKU-003",
+          "qty": 10,
+          "unit_price_cents": 909
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": -245,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000055",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 5635,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 16,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000056",
+      "customer_id": "SYN-CUST-01",
+      "t_arrival": 5975,
+      "lines": [
+        {
+          "sku": "SYN-SKU-001",
+          "qty": 13,
+          "unit_price_cents": 10976
+        },
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 16,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000057",
+      "customer_id": "SYN-CUST-04",
+      "t_arrival": 6010,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 17,
+          "unit_price_cents": 12649
+        },
+        {
+          "sku": "SYN-SKU-005",
+          "qty": 13,
+          "unit_price_cents": 5006
+        },
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 15,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000058",
+      "customer_id": "SYN-CUST-03",
+      "t_arrival": 6023,
+      "lines": [
+        {
+          "sku": "SYN-SKU-006",
+          "qty": 7,
+          "unit_price_cents": 4512
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 161,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000059",
+      "customer_id": "SYN-CUST-06",
+      "t_arrival": 6100,
+      "lines": [
+        {
+          "sku": "SYN-SKU-002",
+          "qty": 10,
+          "unit_price_cents": 2324
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 0,
+        "cancel_after_minutes": -1
+      }
+    },
+    {
+      "order_id": "SYN-PO-000060",
+      "customer_id": "SYN-CUST-05",
+      "t_arrival": 6207,
+      "lines": [
+        {
+          "sku": "SYN-SKU-004",
+          "qty": 4,
+          "unit_price_cents": 12649
+        }
+      ],
+      "faults": {
+        "shipment_delay_minutes": 0,
+        "duplicate_invoice": false,
+        "replay_same_id": false,
+        "payment_failures": 0,
+        "price_variance_bps": 14,
+        "cancel_after_minutes": -1
+      }
+    }
+  ]
+}

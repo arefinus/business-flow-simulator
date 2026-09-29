@@ -1,0 +1,23 @@
+schema_version: 1
+project_id: business-flow-simulator
+run_id: 20260928T103758Z-demo
+status: completed
+mode: demo
+evidence_status: demo
+git_commit: null
+data:
+  source_id: synthetic-fixture-v1
+  version: v1
+  split_manifest_hash: 5ca717da28f131c10e7301ccddf98ed4d00c20fd05a87fd9bfaf2e0e68d5e932
+  sample_counts:
+    orders: 60
+    events: 15901
+configuration_hash: e10d8a1f5dff30abb03c0fcb8a67230668b2049e9c1271110b759b023c770ee8
+seed: 42
+environment:
+  python: 3.10.11
+  device: cpu
+metrics_file: examples/output/kpi_report.csv
+predictions_file: null
+started_at: '2026-09-28T10:37:58Z'
+finished_at: '2026-09-28T10:38:00Z'

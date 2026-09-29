@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "scenario_id": "duplicate_invoice",
+  "seed": 42,
+  "evidence_label": "demo",
+  "note": "Identical seeded synthetic workload under three exception-handling policies. Descriptive simulation output only; no ROI or causal business claim.",
+  "workload_hash": "3c9ef0c5d8ac3cb9d576922e334f704b43091be8dd54dca85640a94f9a7ecb0a",
+  "policies": {
+    "manual": {
+      "kpis": {
+        "scenario_id": "duplicate_invoice",
+        "policy": "manual",
+        "seed": 42,
+        "evidence_label": "demo",
+        "total_orders": 60,
+        "completed_orders": 60,
+        "cancelled_orders": 0,
+        "incomplete_orders": 0,
+        "cycle_time_median_minutes": 4416.0,
+        "cycle_time_p95_minutes": 4436.0,
+        "exception_rate": 0.35,
+        "exceptions_total": 23,
+        "review_items": 23,
+        "auto_resolutions": 0,
+        "escalations": 0,
+        "review_backlog_max": 0,
+        "review_backlog_mean": 0.0,
+        "review_backlog_final": 0,
+        "stockout_count": 1,
+        "replenishments": 6,
+        "partial_shipment_orders": 1,
+        "duplicate_invoices_detected": 19,
+        "duplicate_event_ids_ignored": 14,
+        "processing_cost_cents": 45835,
+        "events_total": 670,
+        "inventory_conserved": true,
+        "cash_conserved": true
+      },
+      "backlog_series": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          960,
+          0
+        ],
+        [
+          1440,
+          0
+        ],
+        [
+          1920,
+          0
+        ],
+        [
+          2400,
+          0
+        ],
+        [
+          2880,
+          0
+        ],
+        [
+          3360,
+          0
+        ],
+        [
+          3840,
+          0
+        ],
+        [
+          4320,
+          0
+        ],
+        [
+          4800,
+          0
+        ],
+        [
+          5280,
+          0
+        ],
+        [
+          5760,
+          0
+        ],
+        [
+          6240,
+          0
+        ],
+        [
+          6720,
+          0
+        ],
+        [
+          7200,
+          0
+        ],
+        [
+          7680,
+          0
+        ],
+        [
+          8160,
+          0
+        ],
+        [
+          8640,
+          0
+        ],
+        [
+          9120,
+          0
+        ],
+        [
+          9600,
+          0
+        ],
+        [
+          10080,
+          0
+        ],
+        [
+          10560,
+          0
+        ],
+        [
+          11040,
+          0
+        ],
+        [
+          11520,
+          0
+        ],
+        [
+          12000,
+          0
+        ],
+        [
+          12480,
+          0
+        ],
+        [
+          12960,
+          0
+        ],
+        [
+          13440,
+          0
+        ],
+        [
+          13920,
+          0
+        ],
+        [
+          14400,
+          0
+        ],
+        [
+          14880,
+          0
+        ],
+        [
+          15360,
+          0
+        ],
+        [
+          15840,
+          0
+        ],
+        [
+          16320,
+          0
+        ],
+        [
+          16800,
+          0
+        ],
+        [
+          17280,
+          0
+        ],
+        [
+          17760,
+          0
+        ],
+        [
+          18240,
+          0
+        ],
+        [
+          18720,
+          0
+        ],
+        [
+          19200,
+          0
+        ],
+        [
+          19680,
+          0
+        ],
+        [
+          20160,
+          0
+        ]
+      ]
+    },
+    "rules_automation": {
+      "kpis": {
+        "scenario_id": "duplicate_invoice",
+        "policy": "rules_automation",
+        "seed": 42,
+        "evidence_label": "demo",
+        "total_orders": 60,
+        "completed_orders": 60,
+        "cancelled_orders": 0,
+        "incomplete_orders": 0,
+        "cycle_time_median_minutes": 4416.0,
+        "cycle_time_p95_minutes": 4417.0,
+        "exception_rate": 0.35,
+        "exceptions_total": 23,
+        "review_items": 2,
+        "auto_resolutions": 21,
+        "escalations": 0,
+        "review_backlog_max": 0,
+        "review_backlog_mean": 0.0,
+        "review_backlog_final": 0,
+        "stockout_count": 1,
+        "replenishments": 6,
+        "partial_shipment_orders": 1,
+        "duplicate_invoices_detected": 19,
+        "duplicate_event_ids_ignored": 14,
+        "processing_cost_cents": 8035,
+        "events_total": 649,
+        "inventory_conserved": true,
+        "cash_conserved": true
+      },
+      "backlog_series": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          960,
+          0
+        ],
+        [
+          1440,
+          0
+        ],
+        [
+          1920,
+          0
+        ],
+        [
+          2400,
+          0
+        ],
+        [
+          2880,
+          0
+        ],
+        [
+          3360,
+          0
+        ],
+        [
+          3840,
+          0
+        ],
+        [
+          4320,
+          0
+        ],
+        [
+          4800,
+          0
+        ],
+        [
+          5280,
+          0
+        ],
+        [
+          5760,
+          0
+        ],
+        [
+          6240,
+          0
+        ],
+        [
+          6720,
+          0
+        ],
+        [
+          7200,
+          0
+        ],
+        [
+          7680,
+          0
+        ],
+        [
+          8160,
+          0
+        ],
+        [
+          8640,
+          0
+        ],
+        [
+          9120,
+          0
+        ],
+        [
+          9600,
+          0
+        ],
+        [
+          10080,
+          0
+        ],
+        [
+          10560,
+          0
+        ],
+        [
+          11040,
+          0
+        ],
+        [
+          11520,
+          0
+        ],
+        [
+          12000,
+          0
+        ],
+        [
+          12480,
+          0
+        ],
+        [
+          12960,
+          0
+        ],
+        [
+          13440,
+          0
+        ],
+        [
+          13920,
+          0
+        ],
+        [
+          14400,
+          0
+        ],
+        [
+          14880,
+          0
+        ],
+        [
+          15360,
+          0
+        ],
+        [
+          15840,
+          0
+        ],
+        [
+          16320,
+          0
+        ],
+        [
+          16800,
+          0
+        ],
+        [
+          17280,
+          0
+        ],
+        [
+          17760,
+          0
+        ],
+        [
+          18240,
+          0
+        ],
+        [
+          18720,
+          0
+        ],
+        [
+          19200,
+          0
+        ],
+        [
+          19680,
+          0
+        ],
+        [
+          20160,
+          0
+        ]
+      ]
+    },
+    "capacity_limited_review": {
+      "kpis": {
+        "scenario_id": "duplicate_invoice",
+        "policy": "capacity_limited_review",
+        "seed": 42,
+        "evidence_label": "demo",
+        "total_orders": 60,
+        "completed_orders": 60,
+        "cancelled_orders": 0,
+        "incomplete_orders": 0,
+        "cycle_time_median_minutes": 4416.0,
+        "cycle_time_p95_minutes": 4436.0,
+        "exception_rate": 0.35,
+        "exceptions_total": 23,
+        "review_items": 23,
+        "auto_resolutions": 0,
+        "escalations": 0,
+        "review_backlog_max": 0,
+        "review_backlog_mean": 0.0,
+        "review_backlog_final": 0,
+        "stockout_count": 1,
+        "replenishments": 6,
+        "partial_shipment_orders": 1,
+        "duplicate_invoices_detected": 19,
+        "duplicate_event_ids_ignored": 14,
+        "processing_cost_cents": 45835,
+        "events_total": 670,
+        "inventory_conserved": true,
+        "cash_conserved": true
+      },
+      "backlog_series": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          960,
+          0
+        ],
+        [
+          1440,
+          0
+        ],
+        [
+          1920,
+          0
+        ],
+        [
+          2400,
+          0
+        ],
+        [
+          2880,
+          0
+        ],
+        [
+          3360,
+          0
+        ],
+        [
+          3840,
+          0
+        ],
+        [
+          4320,
+          0
+        ],
+        [
+          4800,
+          0
+        ],
+        [
+          5280,
+          0
+        ],
+        [
+          5760,
+          0
+        ],
+        [
+          6240,
+          0
+        ],
+        [
+          6720,
+          0
+        ],
+        [
+          7200,
+          0
+        ],
+        [
+          7680,
+          0
+        ],
+        [
+          8160,
+          0
+        ],
+        [
+          8640,
+          0
+        ],
+        [
+          9120,
+          0
+        ],
+        [
+          9600,
+          0
+        ],
+        [
+          10080,
+          0
+        ],
+        [
+          10560,
+          0
+        ],
+        [
+          11040,
+          0
+        ],
+        [
+          11520,
+          0
+        ],
+        [
+          12000,
+          0
+        ],
+        [
+          12480,
+          0
+        ],
+        [
+          12960,
+          0
+        ],
+        [
+          13440,
+          0
+        ],
+        [
+          13920,
+          0
+        ],
+        [
+          14400,
+          0
+        ],
+        [
+          14880,
+          0
+        ],
+        [
+          15360,
+          0
+        ],
+        [
+          15840,
+          0
+        ],
+        [
+          16320,
+          0
+        ],
+        [
+          16800,
+          0
+        ],
+        [
+          17280,
+          0
+        ],
+        [
+          17760,
+          0
+        ],
+        [
+          18240,
+          0
+        ],
+        [
+          18720,
+          0
+        ],
+        [
+          19200,
+          0
+        ],
+        [
+          19680,
+          0
+        ],
+        [
+          20160,
+          0
+        ]
+      ]
+    }
+  }
+}

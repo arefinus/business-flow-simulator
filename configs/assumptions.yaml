@@ -1,0 +1,36 @@
+# Service-time and cost ASSUMPTIONS for a fictional scenario. These are declared inputs,
+# not measurements of any real organisation. Money is integer cents of a fictional USD.
+schema_version: 1
+label: fictional
+currency: "USD (fictional scenario)"
+time_unit: minutes
+epoch: "2026-01-05T08:00:00Z"
+
+service_times_minutes:
+  po_acknowledge: 5            # customer PO -> retailer acknowledges and requests reservation
+  inventory_reservation: 2     # documented; the reservation event itself is instantaneous
+  pick_pack: 45                # reservation -> shipment dispatched
+  shipment_transit: 2880       # 2 days warehouse -> customer
+  replenishment_lead: 4320     # 3 days manufacturer -> warehouse (supplier leg at 30%, ship at 60%)
+  invoice_issue: 15            # final receipt -> invoice issued
+  three_way_match: 1           # invoice issued -> PO/receipt/invoice matched
+  payment_processing: 30       # approval -> payment attempt
+  settlement_clearing: 1440    # 1 day settled -> reported/closed
+  manual_review: 20            # reviewer time per queue item
+  reporting: 1
+  duplicate_invoice_gap: 90    # a duplicate invoice arrives this long after the original
+
+costs_cents:
+  automated_step: 5            # every automated event
+  manual_review_per_item: 1800 # reviewer time per resolved item
+  payment_retry: 50            # each failed payment attempt
+  escalation: 3500             # each escalated review item
+  backorder_line_handling: 1200 # each order line that could not be reserved on first attempt
+
+review:
+  reviewers_manual: 2          # continuous reviewers under manual and rules_automation
+  period_minutes: 480          # one 8-hour review period
+  capacity_per_period: 4       # capacity_limited_review: reviews started per period
+  escalation_after_minutes: 720  # an item expected to wait longer than this is escalated once
+  price_variance_tolerance_bps: 150  # rules_automation R2 auto-approves variance within this
+  shipment_delay_tolerance_minutes: 1440  # rules_automation R4 auto-acknowledges delays within this

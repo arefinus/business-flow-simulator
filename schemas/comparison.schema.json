@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/arefinus/business-flow-simulator/schemas/comparison.schema.json",
+  "title": "Policy comparison",
+  "description": "Three policies on one identical seeded workload. Descriptive demo output; no ROI or causal claim.",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "seed", "evidence_label", "note", "workload_hash", "policies"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "scenario_id": {"type": "string"},
+    "seed": {"type": "integer"},
+    "evidence_label": {"const": "demo"},
+    "note": {"type": "string"},
+    "workload_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "policies": {
+      "type": "object",
+      "required": ["manual", "rules_automation", "capacity_limited_review"],
+      "properties": {
+        "manual": {"type": "object", "required": ["kpis", "backlog_series"]},
+        "rules_automation": {"type": "object", "required": ["kpis", "backlog_series"]},
+        "capacity_limited_review": {"type": "object", "required": ["kpis", "backlog_series"]}
+      }
+    }
+  }
+}

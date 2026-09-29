@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "scenario_id": "capacity_crunch",
+  "seed": 42,
+  "evidence_label": "demo",
+  "note": "Identical seeded synthetic workload under three exception-handling policies. Descriptive simulation output only; no ROI or causal business claim.",
+  "workload_hash": "b2d5e86036c2b6f400a0efe2b6a5bf6dbf9c5c642181387aa9d6a71ef46e9f75",
+  "policies": {
+    "manual": {
+      "kpis": {
+        "scenario_id": "capacity_crunch",
+        "policy": "manual",
+        "seed": 42,
+        "evidence_label": "demo",
+        "total_orders": 160,
+        "completed_orders": 150,
+        "cancelled_orders": 4,
+        "incomplete_orders": 6,
+        "cycle_time_median_minutes": 9128.0,
+        "cycle_time_p95_minutes": 15284.6,
+        "exception_rate": 0.4938,
+        "exceptions_total": 109,
+        "review_items": 109,
+        "auto_resolutions": 0,
+        "escalations": 0,
+        "review_backlog_max": 1,
+        "review_backlog_mean": 0.05,
+        "review_backlog_final": 0,
+        "stockout_count": 304,
+        "replenishments": 24,
+        "partial_shipment_orders": 89,
+        "duplicate_invoices_detected": 11,
+        "duplicate_event_ids_ignored": 8,
+        "processing_cost_cents": 575785,
+        "events_total": 2697,
+        "inventory_conserved": true,
+        "cash_conserved": true
+      },
+      "backlog_series": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          960,
+          0
+        ],
+        [
+          1440,
+          0
+        ],
+        [
+          1920,
+          0
+        ],
+        [
+          2400,
+          0
+        ],
+        [
+          2880,
+          0
+        ],
+        [
+          3360,
+          0
+        ],
+        [
+          3840,
+          1
+        ],
+        [
+          4320,
+          0
+        ],
+        [
+          4800,
+          0
+        ],
+        [
+          5280,
+          0
+        ],
+        [
+          5760,
+          0
+        ],
+        [
+          6240,
+          0
+        ],
+        [
+          6720,
+          0
+        ],
+        [
+          7200,
+          0
+        ],
+        [
+          7680,
+          0
+        ],
+        [
+          8160,
+          0
+        ],
+        [
+          8640,
+          1
+        ],
+        [
+          9120,
+          0
+        ],
+        [
+          9600,
+          0
+        ],
+        [
+          10080,
+          0
+        ],
+        [
+          10560,
+          0
+        ],
+        [
+          11040,
+          0
+        ],
+        [
+          11520,
+          0
+        ],
+        [
+          12000,
+          0
+        ],
+        [
+          12480,
+          0
+        ],
+        [
+          12960,
+          0
+        ],
+        [
+          13440,
+          0
+        ],
+        [
+          13920,
+          0
+        ],
+        [
+          14400,
+          0
+        ],
+        [
+          14880,
+          0
+        ],
+        [
+          15360,
+          0
+        ],
+        [
+          15840,
+          0
+        ],
+        [
+          16320,
+          0
+        ],
+        [
+          16800,
+          0
+        ],
+        [
+          17280,
+          0
+        ],
+        [
+          17760,
+          0
+        ],
+        [
+          18240,
+          0
+        ],
+        [
+          18720,
+          0
+        ],
+        [
+          19200,
+          0
+        ],
+        [
+          19680,
+          0
+        ],
+        [
+          20160,
+          0
+        ]
+      ]
+    },
+    "rules_automation": {
+      "kpis": {
+        "scenario_id": "capacity_crunch",
+        "policy": "rules_automation",
+        "seed": 42,
+        "evidence_label": "demo",
+        "total_orders": 160,
+        "completed_orders": 150,
+        "cancelled_orders": 4,
+        "incomplete_orders": 6,
+        "cycle_time_median_minutes": 9118.0,
+        "cycle_time_p95_minutes": 15257.6,
+        "exception_rate": 0.4938,
+        "exceptions_total": 109,
+        "review_items": 37,
+        "auto_resolutions": 72,
+        "escalations": 0,
+        "review_backlog_max": 0,
+        "review_backlog_mean": 0.0,
+        "review_backlog_final": 0,
+        "stockout_count": 304,
+        "replenishments": 24,
+        "partial_shipment_orders": 89,
+        "duplicate_invoices_detected": 11,
+        "duplicate_event_ids_ignored": 8,
+        "processing_cost_cents": 446185,
+        "events_total": 2625,
+        "inventory_conserved": true,
+        "cash_conserved": true
+      },
+      "backlog_series": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          960,
+          0
+        ],
+        [
+          1440,
+          0
+        ],
+        [
+          1920,
+          0
+        ],
+        [
+          2400,
+          0
+        ],
+        [
+          2880,
+          0
+        ],
+        [
+          3360,
+          0
+        ],
+        [
+          3840,
+          0
+        ],
+        [
+          4320,
+          0
+        ],
+        [
+          4800,
+          0
+        ],
+        [
+          5280,
+          0
+        ],
+        [
+          5760,
+          0
+        ],
+        [
+          6240,
+          0
+        ],
+        [
+          6720,
+          0
+        ],
+        [
+          7200,
+          0
+        ],
+        [
+          7680,
+          0
+        ],
+        [
+          8160,
+          0
+        ],
+        [
+          8640,
+          0
+        ],
+        [
+          9120,
+          0
+        ],
+        [
+          9600,
+          0
+        ],
+        [
+          10080,
+          0
+        ],
+        [
+          10560,
+          0
+        ],
+        [
+          11040,
+          0
+        ],
+        [
+          11520,
+          0
+        ],
+        [
+          12000,
+          0
+        ],
+        [
+          12480,
+          0
+        ],
+        [
+          12960,
+          0
+        ],
+        [
+          13440,
+          0
+        ],
+        [
+          13920,
+          0
+        ],
+        [
+          14400,
+          0
+        ],
+        [
+          14880,
+          0
+        ],
+        [
+          15360,
+          0
+        ],
+        [
+          15840,
+          0
+        ],
+        [
+          16320,
+          0
+        ],
+        [
+          16800,
+          0
+        ],
+        [
+          17280,
+          0
+        ],
+        [
+          17760,
+          0
+        ],
+        [
+          18240,
+          0
+        ],
+        [
+          18720,
+          0
+        ],
+        [
+          19200,
+          0
+        ],
+        [
+          19680,
+          0
+        ],
+        [
+          20160,
+          0
+        ]
+      ]
+    },
+    "capacity_limited_review": {
+      "kpis": {
+        "scenario_id": "capacity_crunch",
+        "policy": "capacity_limited_review",
+        "seed": 42,
+        "evidence_label": "demo",
+        "total_orders": 160,
+        "completed_orders": 141,
+        "cancelled_orders": 4,
+        "incomplete_orders": 15,
+        "cycle_time_median_minutes": 8965.0,
+        "cycle_time_p95_minutes": 15331.0,
+        "exception_rate": 0.4938,
+        "exceptions_total": 108,
+        "review_items": 108,
+        "auto_resolutions": 0,
+        "escalations": 35,
+        "review_backlog_max": 17,
+        "review_backlog_mean": 3.44,
+        "review_backlog_final": 3,
+        "stockout_count": 304,
+        "replenishments": 24,
+        "partial_shipment_orders": 89,
+        "duplicate_invoices_detected": 11,
+        "duplicate_event_ids_ignored": 8,
+        "processing_cost_cents": 690945,
+        "events_total": 2709,
+        "inventory_conserved": true,
+        "cash_conserved": true
+      },
+      "backlog_series": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          960,
+          0
+        ],
+        [
+          1440,
+          0
+        ],
+        [
+          1920,
+          0
+        ],
+        [
+          2400,
+          0
+        ],
+        [
+          2880,
+          0
+        ],
+        [
+          3360,
+          3
+        ],
+        [
+          3840,
+          3
+        ],
+        [
+          4320,
+          5
+        ],
+        [
+          4800,
+          1
+        ],
+        [
+          5280,
+          0
+        ],
+        [
+          5760,
+          0
+        ],
+        [
+          6240,
+          0
+        ],
+        [
+          6720,
+          0
+        ],
+        [
+          7200,
+          0
+        ],
+        [
+          7680,
+          0
+        ],
+        [
+          8160,
+          0
+        ],
+        [
+          8640,
+          2
+        ],
+        [
+          9120,
+          3
+        ],
+        [
+          9600,
+          6
+        ],
+        [
+          10080,
+          3
+        ],
+        [
+          10560,
+          0
+        ],
+        [
+          11040,
+          0
+        ],
+        [
+          11520,
+          0
+        ],
+        [
+          12000,
+          0
+        ],
+        [
+          12480,
+          5
+        ],
+        [
+          12960,
+          10
+        ],
+        [
+          13440,
+          11
+        ],
+        [
+          13920,
+          9
+        ],
+        [
+          14400,
+          5
+        ],
+        [
+          14880,
+          2
+        ],
+        [
+          15360,
+          0
+        ],
+        [
+          15840,
+          0
+        ],
+        [
+          16320,
+          0
+        ],
+        [
+          16800,
+          7
+        ],
+        [
+          17280,
+          15
+        ],
+        [
+          17760,
+          17
+        ],
+        [
+          18240,
+          13
+        ],
+        [
+          18720,
+          11
+        ],
+        [
+          19200,
+          8
+        ],
+        [
+          19680,
+          6
+        ],
+        [
+          20160,
+          3
+        ]
+      ]
+    }
+  }
+}

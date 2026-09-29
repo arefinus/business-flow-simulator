@@ -1,0 +1,16 @@
+scenario_id,policy,seed,evidence_label,total_orders,completed_orders,cancelled_orders,incomplete_orders,cycle_time_median_minutes,cycle_time_p95_minutes,exception_rate,exceptions_total,review_items,auto_resolutions,escalations,review_backlog_max,review_backlog_mean,review_backlog_final,stockout_count,replenishments,partial_shipment_orders,duplicate_invoices_detected,duplicate_event_ids_ignored,processing_cost_cents,events_total,inventory_conserved,cash_conserved
+baseline,manual,42,demo,60,60,0,0,4416.0,4436.0,0.0667,4,4,0,0,0,0.0,0,1,6,1,0,0,11255,575,True,True
+baseline,rules_automation,42,demo,60,60,0,0,4416.0,4417.0,0.0667,4,2,2,0,0,0.0,0,1,6,1,0,0,7655,573,True,True
+baseline,capacity_limited_review,42,demo,60,60,0,0,4416.0,4436.0,0.0667,4,4,0,0,0,0.0,0,1,6,1,0,0,11255,575,True,True
+capacity_crunch,manual,42,demo,160,150,4,6,9128.0,15284.6,0.4938,109,109,0,0,1,0.05,0,304,24,89,11,8,575785,2697,True,True
+capacity_crunch,rules_automation,42,demo,160,150,4,6,9118.0,15257.6,0.4938,109,37,72,0,0,0.0,0,304,24,89,11,8,446185,2625,True,True
+capacity_crunch,capacity_limited_review,42,demo,160,141,4,15,8965.0,15331.0,0.4938,108,108,0,35,17,3.44,3,304,24,89,11,8,690945,2709,True,True
+delayed_shipment,manual,42,demo,60,60,0,0,4416.0,7296.0,0.45,29,29,0,0,1,0.02,0,1,6,1,0,0,56505,650,True,True
+delayed_shipment,rules_automation,42,demo,60,60,0,0,4416.0,7296.0,0.45,29,27,2,0,1,0.02,0,1,6,1,0,0,52905,648,True,True
+delayed_shipment,capacity_limited_review,42,demo,60,60,0,0,4416.0,7296.0,0.45,29,29,0,0,1,0.02,0,1,6,1,0,0,56505,650,True,True
+duplicate_invoice,manual,42,demo,60,60,0,0,4416.0,4436.0,0.35,23,23,0,0,0,0.0,0,1,6,1,19,14,45835,670,True,True
+duplicate_invoice,rules_automation,42,demo,60,60,0,0,4416.0,4417.0,0.35,23,2,21,0,0,0.0,0,1,6,1,19,14,8035,649,True,True
+duplicate_invoice,capacity_limited_review,42,demo,60,60,0,0,4416.0,4436.0,0.35,23,23,0,0,0,0.0,0,1,6,1,19,14,45835,670,True,True
+failed_payment_step,manual,42,demo,60,58,2,0,4416.0,4841.9,0.3667,48,48,0,0,1,0.05,0,5,6,4,0,0,98020,749,True,True
+failed_payment_step,rules_automation,42,demo,60,58,2,0,4416.0,4807.9,0.3667,48,11,37,0,0,0.0,0,5,6,4,0,0,31420,712,True,True
+failed_payment_step,capacity_limited_review,42,demo,60,58,2,0,4416.0,5145.3,0.3667,48,48,0,0,4,0.21,0,5,6,4,0,0,98020,749,True,True
